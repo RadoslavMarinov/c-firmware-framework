@@ -1,0 +1,2 @@
+# Unignore linker script files recursively
+!*.ld

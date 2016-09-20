@@ -1,0 +1,78 @@
+
+
+Създаване на приложение:
+
+Създаване на нови класове:
+    [ ] The objects 'event' and 'state' are always private. Event is going to be set either from the class itself or from the outside trough request-method. @started(16-06-23 15:32)
+
+
+
+Създаване на нови файлове:
+     Ordinary:
+         [ ] Всеки новосъздаден файл трябва да се включи във съответният (от същият тип) файл на компонента който го притежава.
+
+
+Self data determination 
+    To determine how many  self data variables we need for a specific class some rules may be applied:
+        Logically what properties this class should have? Can we derive them from the outside? 
+        [ ] We can retrieve them from the outside --> No such data-object is needed (spare RAM)
+        [ ] 
+
+Data object identification 
+    - All the object identifications should be related to the object characteristics. As possible as less (spell) connected  to the outside world.
+
+
+Class creation model:
+    [ ] Prerequisites - What objects, operations needs to be completed before component commence operation.
+
+    [ ] The class must do exactly what is described: nothing-more, nothing-less.
+
+    [ ] What are the conditions (as few as possible) for the component to be complete supplementary?
+
+    [ ] Class instance obtains only CLASS_NAME_selfData. Required objects and operations are derived from it, within the class's derivative file.
+    
+    [ ] When a class-instance needs to read/write objects in another class, it obtains only interfaces (setters and/or getters) to each one.
+
+    [ ] ? A state should not have more than one (if - else if - ..... -else) branching. If further branching is necessary, then new state has to be formulated.  
+    
+    [ ] Events:
+         [ ] Identifiers:
+             [ ] __class_name_evDo is designated for events posted by the class to itself
+
+    [ ] Function class_name_dispatchEvents:
+         [ ]  
+         [ ] 
+         [ ] Action section: Action section is comprised of two major sections:
+             [x] Event-State handler:  @done (16-06-22 15:39)
+                  [ ] Identifiers: class_name_eventNameStateName
+                     - EventName is the event that cause the action
+                     - State name is the state within which the action is carried out.
+                     - Example: In class named "top_limit", event = __class_name_evSearch and state = __class_name_stIdle, the derived decision making is going to be top_limit_SearchIdle:
+             [x] Transition section: In this section the transition actions are carried out @done (16-06-22 15:39)
+                  [ ] Identifier: class_name_fromSourceStateName2DestinationStateName
+                     [ ] DestinationStateName - the name of the state to go into.
+                     [ ] SourceStateName - the name of the state going out from.
+                     [ ] Example: top_limit_fromIdle2Active:
+             [x] Departure section: In this section are performed the necessary actions for the transition from one state to another. @done (16-06-22 15:39)
+                 [ ] Identifiers: class_name_toStateName
+                      [ ] StateName is the name of the state that is assigned to the state-object.
+                      [ ] Example: top_limit_toActive:
+                 [ ] Observation analysis:
+                     [ ] It seems that in a label from 
+
+Code :
+    In an action where there is a state change, the order of operations matter:
+
+     1. If the class informs outer classes that its state has been changed - First: change the state, second inform outer classes.
+
+     2. The class needs to perform some 'configurable' tasks before alter its state -   First: call the method, second change the state. 
+
+State-Diagram - Code relations:
+    [ ] It seems that, where there is a branching state( on the diagram), the state has a Event-State-Action(into the code). @started(16-06-23 13:46)
+    [ ] It seems that, where there is a is a state with transition toward it( on the diagram), there is a Departure-Action(into the code) @started(16-06-23 13:48) 
+
+Events: 
+    It seems that events can be classified in major two types.
+    [ ] The first one is "Standard Event". This is an event that is of enumeration type, and can be assigned to the 'event' variable of the class.
+    [ ] The second one is an event independent of the first one. This event does not associate with the 'event' variable of the class, and have a different structure. So we can call that event "Non-Standard Event". It seems to me that this event may come from passive classes (those who don't have regular functions). An example of such event is a hardware interrupt flag, that is being polled by the 'detect events' section.
+ 

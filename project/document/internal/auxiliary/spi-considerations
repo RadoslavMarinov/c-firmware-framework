@@ -1,0 +1,27 @@
+SPI
+
+Starter Kit EFM32WG-STK3800 (Wonder Gecko)
+
+|-------------------------------------------------┑
+|					USART1 #1                     |
+|-------------------------------------------------┑
+|_____EXP-PORT___|______SPI _____|_______MCU______|
+|  	 4    	     |	MOSI	     |	PD0           |   
+|----------------┾---------------┾----------------|
+| 	 6	         |	MISO	     |	PD1           |
+|----------------┾---------------┾----------------|      
+|    8		     | 	CLK	         |	PD2           |
+|----------------┾---------------┾----------------|      
+|    10          |	CS	         |	PD3           |    
+|-------------------------------------------------┙
+
+
+MODE "3"
+Clock Polarity:	High
+Clock Phase:  	Sample On Trailing Edge
+
+
+EFM32 - Sends Least Significant Bit first by defaultm BUT M90E32AS accepts Most Significant Bit First
+	- Set bit USARTn_CTRL.MSBF 
+
+17.3.3.3.2 AUTOTX 

@@ -1,0 +1,39 @@
+
+ [ ]  Create new application in Eclipse
+     [ ]  File -> New -> Silicon Lab MCU Project
+     [ ]  Select the kit: Kit(dropdown) and type Next
+     [ ]  Select Project Type -> 'Empty C Program' then type 'Next >'
+     [ ]  Select Project name
+     [ ]  Uncheck: 'Use default location' and select the project location. Metha-example: ${PARENT_FOLDER_LOCATION}/c-framework/implementation/eclipse/${PROJECT_FOLDER}
+     [ ]  Type 'Finish'
+
+ [ ]  Into the project explorer you will be able to see folder named 'src'. Delete it!
+ [ ]  Delete folder 'emlib' as well!
+ [ ]  Open folder 'CMSIS' and delete its children folder 'efm32xx'!
+
+ [ ]  Import the source files as a linked resource:
+     [ ]  Right click on project folder and select Import -> Import -> General -> File System -> Next > From directory: ${PARENT_FOLDER_PATH}/c-framework/implementation ....
+          [ ] check the checkbox of the folder 'c'
+          [ ]   into the same view type Advanced  and check: 'Create links in workspace' and 'Create link location relative to PROJECT_LOC' then type Finish
+
+ [ ]  Import the linker script: This is not a mandatory step. This step provides easy access to the linker script file trough the project explorer. This step does not aid the build.
+     [ ]  Right click on the Project -> Import -> Import ->General ->File System ->From directory. Metha-example: ${PARENT_FOLDER_LOCATION}/c-framework/implementation/ld/*.ld ....
+         [ ]    then check the check boxes: 'Create links in workspace', 'Create link location relative to: PROJECT_LOC'
+
+ [ ]  Select custom linker script for the build:
+     [ ]  Project properties -> C/C++ Build -> Settings -> Toll Settings (tab) -> Memory Layout -> check 'Use custom linker script' and point out the location. Metha-example:  ${PARENT_FOLDER_LOCATION}/c-framework/implementation/ld/*.ld 
+
+
+ [ ] Import the startUp files:
+       [ ]  Right click onto folder 'CMSIS' -> Import -> Import -> General -> File System -> Next > From directory: ${PARENT_FOLDER_PATH}/c-framework/infrastructure/mcu-family/mcu-family-xx/startup-files/   ....
+            [ ]  into the same view type Advanced  and check: 'Create links in workspace' and 'Create link location relative to PROJECT_LOC' then type Finish
+
+
+///////////////////////////////////////// At this stage without including the application, just empty main(), should build ///////////////////////////////////////////////////////////
+
+[ ]  Set predefined symbols: Project Properties -> C/C++ General -> Paths and Symbols -> Symbols (tab) -> Languages - GNU C -> Add -> Name: application_isSingleCompilationUnit() Value: 1 -> OK -> OK
+    [ ]  There are two symbols required to build.
+       [ ]  The one is selecting the application to build for example: ELECTRICITY_METER_CONTROLLER_HAPPY_GECKO_APPLICATION
+       [ ]  The other is the type of the compilation unit. It can be either 'single' or 'multiple'. When single compilation unit is preferred, 'application_isSingleCompilationUnit()' must return 1, otherwise(multiple compilation unit) 0.
+
+ [ ]  Set application self data symbol into the linker script file.

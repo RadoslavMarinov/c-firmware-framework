@@ -1,0 +1,4 @@
+# Unignore everything recursively
+!*
+default-settings.todo
+reminder.todo

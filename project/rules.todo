@@ -1,0 +1,120 @@
+===================================================================================
+                        Program Structure
+===================================================================================
+Header
+    Primary class interface      order-by-class      (-primary.h)
+        [] Private    (__xxx_)
+        	- Type definitions
+            - Object-like macro definitions
+            - Function-like macro definitions
+        [] Protected  (_xxx_)
+        	- Type definitions
+            - Object-like macro definitions
+            - Function-like macro definitions
+        [] Public     (xxx_)
+        	- Type definitions
+            - Object-like macro definitions
+            - Function-like macro definitions
+    
+    Configuration      order-by-class                (-configuration.h)
+        [ ] Configurations
+        
+    Derivative class interface         (-derivative.h)
+        [ ] Dependency Check
+            #ifndef CCC_xxx
+                #error Missing required CCC_xxx
+            #endif // CCC_xxx
+
+        [ ] Private types
+            typedef xxx ttt
+
+        [ ] Private macros
+            - Object-like
+            - Function-like
+            - Procedure-like
+        
+        [ ] Protected types
+            typedef xxx ttt
+
+        [ ] Protected macros
+            - Object-like
+            - Function-like
+            - Procedure-like
+
+        [ ] Public Types
+            typedef int myint; 
+    
+        [ ] Public macros
+            - Object-like
+            - Function-like
+            - Procedure-like
+                
+        [ ] Public Functions 
+            (extern prototype).
+
+        [ ] Public Objects
+            extern ccc_SelfData ccc_selfData;
+
+Sources         order-by-class                       (.c) 
+        [ ] Private Static Functions
+
+        [ ] Public Functions
+
+        [ ] Public Objects
+            ccc_SelfData ccc_selfData;
+
+===================================================================================
+                        Program Header Hierarchy
+===================================================================================
+application.h
+    #include aaa-application-primary.h
+        #include components/.../ccc-primary.h
+            #include components/.../ooo-primary.h
+            #define ...
+        #define ... 
+    
+    #include aaa-application-configuration.h
+        #define ...
+        #include components/.../ccc-configuration.h
+    
+    #include aaa-application-derivative.h
+        #include components/.../ccc-derivative.h
+            #include components/.../ooo-derivative.h
+            #define ...
+        #define ... 
+
+===================================================================================
+          Program Source Hierarchy for one-shot compilation
+===================================================================================
+project.c (for efm32)
+    #include application.c
+        #include aaa-application.c
+            #include application.h
+            #include components/.../ccc.c
+                #include application.h
+                #include ooo.c
+                    #include application.h
+        #define APPLICATION_Init()                     
+        #define APPLICATION_DispatchEvents()
+    
+===================================================================================
+            Program Source Hierarchy for separate source compilation
+===================================================================================
+project.c (for efm32)
+    #include application.c
+        #include application.h
+    #define APPLICATION_Init()                     
+    #define APPLICATION_DispatchEvents()
+
+aaa-application.c
+    #include application.h
+
+components/.../ccc.c
+    #include application.h
+
+components/.../ooo.c
+    #include application.h
+===================================================================================
+                        End
+===================================================================================
+        

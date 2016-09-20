@@ -1,0 +1,11 @@
+Starter Kit EFM32WG-STK3800 (Wonder Gecko)
+
+
+_____EXP-PORT___|______SPI _____|_______MCU______
+		|		|
+4 	     	|	MOSI	|	PD0
+6 		|	MISO	|	PD1
+8   		| 	CLK	|	PD2
+10  		|	CS	|	PD3
+--------------------------------------------------
+USART1 #1		

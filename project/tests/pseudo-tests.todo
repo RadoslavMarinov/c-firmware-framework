@@ -1,0 +1,80 @@
+
+
+
+============= Тест на клас Top Limit =============
+=============      2016-06-21        =============
+
+0 --> b         
+1 --> c
+2 --> f
+3 --> m
+4 --> o
+5 --> o
+6 --> p
+7 --> s
+8 --> s
+9 --> s
+
+Test Case 1: 
+    Prerequisites: Bottom = 9; Top = 0;
+    Request: Find letter 'n'
+    Expected results: state = NotFound
+    Result: PASSED!
+ 
+ Test Case 2:
+    Prerequisites: Bottom = 9; Top = 0;
+    Request: Find Letter 'b'
+    Expected results: state = Found, TopLimit = 0;
+    Result: PASSED!
+
+Test Case 3:
+    Prerequisites: Bottom = 9; Top = 0;
+    Request: Find letter 's'
+    Expected results: state = Found, TopLimit = 7;
+    Result: PASSED!
+
+Test Case 4:
+    Prerequisites: Bottom = 5; Top = 5;
+    Request: Find 'r'
+    Expected results: state = Rejected;
+    Result: PASSED!
+
+
+============= Тест на клас Bottom Limit  =============
+=============      2016-06-21            =============
+
+0 --> b         
+1 --> c
+2 --> f
+3 --> m
+4 --> o
+5 --> o
+6 --> p
+7 --> s
+8 --> s
+9 --> s
+
+Test Case 1: 
+    Prerequisites: Bottom = 9; Top = 0;
+    Request: Find 's';
+    Expected results: Bottom = 9, state = Found;
+    Result: PASSED!
+
+Test Case 2:
+    Prerequisites: Bottom = 9; Top = 0;
+    Request: Find 'b'
+    Expected results: state = Found, TopLimit = 0;
+    Result: PASSED!
+
+Test Case 3:
+    Prerequisites: Bottom = 9; Top = 0;
+    Request: Find 'r'
+    Expected results: state = NotFound; Bottom = 7; Top = 6;
+     Result: PASSED!
+
+Test Case 4:
+    Prerequisites: Bottom = 5; Top = 5;
+    Request: Find 'r'
+    Expected results: state = Rejected;
+    Result: PASSED!
+

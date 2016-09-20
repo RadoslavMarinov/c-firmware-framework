@@ -1,0 +1,53 @@
+# Set the default behavior, regardless of core.autocrlf setting.
+* -text
+
+
+## .gitattributes - HELP
+# =====================================
+# http://git-scm.com/docs/gitattributes
+#
+# .gitattributes defines attributes per path
+#
+# text attribute
+# -------------------------------------
+# This attribute enables and controls end-of-line normalization.
+# When a text file is normalized, its line endings are converted to LF in the repository. 
+#
+#   text        Setting the text attribute on a path enables end-of-line 
+#               normalization and marks the path as a text file. 
+#   -text       Unsetting the text attribute on a path tells Git not to attempt 
+#               any end-of-line conversion upon checkin or checkout.
+#   text=auto   Automatic end-of-line normalization. If Git decides that the content 
+#               is text, its line endings are normalized to LF on checkin.
+#   !text       If the text attribute is unspecified, Git uses the core.autocrlf 
+#               configuration variable to determine if the file should be converted.
+#
+# eol attribute
+# -------------------------------------
+# This attribute sets a specific line-ending style to be used in 
+# the working directory. It enables end-of-line normalization without 
+# any content checks, effectively setting the text attribute.
+# 
+#   eol=crlf    This setting forces Git to normalize line endings for this file 
+#               on checkin and convert them to CRLF when the file is checked out.
+#   eol=lf      This setting forces Git to normalize line endings to LF 
+#               on checkin and prevents conversion to CRLF when the file is checked out.
+
+## .gitattributes - Example
+# =====================================
+# https://help.github.com/articles/dealing-with-line-endings/#platform-windows
+#
+#    # Set the default behavior to auto, regardless of core.autocrlf setting.
+#    * text=auto
+#
+#    # Explicitly declare text files you want to always be normalized and converted
+#    # to native line endings on checkout.
+#    *.c text
+#    *.h text
+#
+#    # Declare files that will always have CRLF line endings on checkout.
+#    *.sln text eol=crlf
+#
+#    # Denote all files that are truly binary and should not be modified.
+#    *.png binary
+#    *.jpg binary

@@ -1,0 +1,204 @@
+
+<root>
+	<register address="00H" name="MeterEn" type="R/W" description="Metering Enable" designator="meter.en"/>
+	<register address="01H" name="ChannelMap" type="R/W" description="Current Channel Mapping Configuration" designator="channel.map"/>
+	<register address="02H" name="ChannelMapU" type="R/W" description="Voltage Channel Mapping Configuration" designator="channel.map.u"/>
+	<register address="05H" name="SagPeakDetC" type="R/W" description="Sag and Peak Detector Period Configuration" designator="sag.peak.det.c"/>
+	<register address="06H" name="OVth" type="R/W" description="Over Voltage Threshold" designator="o.v.th"/>
+	<register address="07H" name="ZXConfig" type="R/W" description="Zero-Crossing Configuration" designator="z.x.config"/>
+	<register address="08H" name="SagTh" type="R/W" description="Voltage Sag Threshold" designator="sag.th"/>
+	<register address="09H" name="PhaseLossTh" type="R/W" description="Voltage Phase Losing Threshold" designator="phase.loss.th"/>
+	<register address="0AH" name="InWarnTh" type="R/W" description="Neutral Current (Calculated) Warning Threshold" designator="in.warn.th"/>
+	<register address="0BH" name="OIth" type="R/W" description="Over Current Threshold" designator="o.i.th"/>
+	<register address="0CH" name="FreqLoTh" type="R/W" description="Low Threshold for Frequency Detection" designator="freq.lo.th"/>
+	<register address="0DH" name="FreqHiTh" type="R/W" description="High Threshold for Frequency Detection" designator="freq.hi.th"/>
+	<register address="0EH" name="PMPwrCtrl" type="R/W" description="Partial Measurement Mode Power Control" designator="p.m.pwr.ctrl"/>
+	<register address="0FH" name="IRQ0MergeCf" type="R/W" description="IRQ0 Merge Configuration" designator="irq0.merge.cf"/>
+	<register address="10H" name="DetectCtrl" type="R/W" description="Current Detect Control" designator="detect.ctr.l"/>
+	<register address="11H" name="DetectTh1" type="R/W" description="Channel 1 Current Threshold in Detection Mode" designator="detect.th1"/>
+	<register address="12H" name="DetectTh2" type="R/W" description="Channel 2 Current Threshold in Detection Mode" designator="detect.th2"/>
+	<register address="13H" name="DetectTh3" type="R/W" description="Channel 3 Current Threshold in Detection Mode" designator="detect.th3"/>
+	<register address="14H" name="IDCoffsetA" type="R/W" description="Phase A Current DC offset" designator="i.dc.offset.a"/>
+	<register address="15H" name="IDCoffsetB" type="R/W" description="Phase B Current DC offset" designator="i.dc.offset.b"/>
+	<register address="16H" name="IDCoffsetC" type="R/W" description="Phase C Current DC offset" designator="i.dc.offset.c"/>
+	<register address="17H" name="UDCoffsetA" type="R/W" description="Voltage DC offset for Channel A" designator="udc.offset.a"/>
+	<register address="18H" name="UDCoffsetB" type="R/W" description="Voltage DC offset for Channel B" designator="u.dc.offset.b"/>
+	<register address="19H" name="UDCoffsetC" type="R/W" description="Voltage DC offset for Channel C" designator="u.dc.offset.c"/>
+	<register address="1AH" name="UGainTAB" type="R/W" description="Voltage Gain Temperature Compensation for Phase A/B" designator="u.gain.t.ab"/>
+	<register address="1BH" name="UGainTC" type="R/W" description="Voltage Gain Temperature Compensation for Phase C" designator="u.gain.t.c"/>
+	<register address="1CH" name="PhiFreqComp" type="R/W" description="Phase Compensation for Frequency" designator="phi.freq.comp"/>
+	<register address="20H" name="LOGIrms0" type="R/W" description="Current (Log Irms0) Configuration for Segment Compensation" designator="log.i.rms0"/>
+	<register address="21H" name="LOGIrms1" type="R/W" description="Current (Log Irms1) Configuration for Segment Compensation" designator="log.i.rms1"/>
+	<register address="22H" name="F0" type="R/W" description="Nominal Frequency" designator="f0"/>
+	<register address="23H" name="T0" type="R/W" description="Nominal Temperature" designator="t0"/>
+	<register address="24H" name="PhiAIrms01" type="R/W" description="Phase A Phase Compensation for Current Segment 0 and 1" designator="ph.i.a.i.rms01"/>
+	<register address="25H" name="PhiAIrms2" type="R/W" description="Phase A Phase Compensation for Current Segment 2" designator="ph.i.a.i.rms2"/>
+	<register address="26H" name="GainAIrms01" type="R/W" description="Phase A Gain Compensation for Current Segment 0 and 1" designator="gain.a.i.rms01"/>
+	<register address="27H" name="GainAIrms2" type="R/W" description="Phase A Gain Compensation for Current Segment 2" designator="gain.a.i.rms2"/>
+	<register address="28H" name="PhiBIrms01" type="R/W" description="Phase B Phase Compensation for Current Segment 0 and 1" designator="ph.i.b.i.rms01"/>
+	<register address="29H" name="PhiBIrms2" type="R/W" description="Phase B Phase Compensation for Current Segment 2" designator="ph.i.b.i.rms2"/>
+	<register address="2AH" name="GainBIrms01" type="R/W" description="Phase B Gain Compensation for Current Segment 0 and 1" designator="gain.b.i.rms01"/>
+	<register address="2BH" name="GainBIrms2" type="R/W" description="Phase B Gain Compensation for Current Segment 2" designator="gain.b.i.rms2"/>
+	<register address="2CH" name="PhiCIrms01" type="R/W" description="Phase C Phase Compensation for Current Segment 0 and 1" designator="ph.i.c.i.rms01"/>
+	<register address="2DH" name="PhiCIrms2" type="R/W" description="Phase C Phase Compensation for Current Segment 2" designator="ph.i.c.i.rms2"/>
+	<register address="2EH" name="GainCIrms01" type="R/W" description="Phase C Gain Compensation for Current Segment 0 and 1" designator="gain.c.i.rms01"/>
+	<register address="2FH" name="GainCIrms2" type="R/W" description="Phase C Gain Compensation for Current Segment 2" designator="gain.c.i.rms2"/>
+	<register address="31H" name="PLconstH" type="R/W" description="High Word of PL_Constant" designator="pl.const.h"/>
+	<register address="32H" name="PLconstL" type="R/W" description="Low Word of PL_Constant" designator="pl.const.l"/>
+	<register address="33H" name="MMode0" type="R/W" description="Metering Method Configuration" designator="m.mode0"/>
+	<register address="34H" name="MMode1" type="R/W" description="PGA Gain Configuration" designator="m.mode1"/>
+	<register address="35H" name="PStartTh" type="R/W" description="Active Startup Power Threshold" designator="p.start.th"/>
+	<register address="36H" name="QStartTh" type="R/W" description="Reactive Startup Power Threshold" designator="q.start.th"/>
+	<register address="37H" name="SStartTh" type="R/W" description="Apparent Startup Power Threshold" designator="s.start.th"/>
+	<register address="38H" name="PPhaseTh" type="R/W" description="Startup Power Threshold for Any Phase (Active Energy Accumulation)" designator="p.phase.th"/>
+	<register address="39H" name="QPhaseTh" type="R/W" description="Startup Power Threshold for Any Phase (ReActive Energy Accumulation)" designator="q.phase.th"/>
+	<register address="3AH" name="SPhaseTh" type="R/W" description="Startup Power Threshold for Any Phase (Apparent Energy Accumulation)" designator="s.phase.th"/>
+	<register address="41H" name="PoffsetA" type="R/W" description="Phase A Active Power offset" designator="p.offset.a"/>
+	<register address="42H" name="QoffsetA" type="R/W" description="Phase A Reactive Power offset" designator="q.offset.a"/>
+	<register address="43H" name="PoffsetB" type="R/W" description="Phase B Active Power offset" designator="p.offset.b"/>
+	<register address="44H" name="QoffsetB" type="R/W" description="Phase B Reactive Power offset" designator="q.offset.b"/>
+	<register address="45H" name="PoffsetC" type="R/W" description="Phase C Active Power offset" designator="p.offset.c"/>
+	<register address="46H" name="QoffsetC" type="R/W" description="Phase C Reactive Power offset" designator="q.offset.c"/>
+	<register address="47H" name="PQGainA" type="R/W" description="Phase A Calibration Gain" designator="p.q.gain.a"/>
+	<register address="48H" name="PhiA" type="R/W" description="Phase A Calibration Phase Angle" designator="ph.i.a"/>
+	<register address="49H" name="PQGainB" type="R/W" description="Phase B Calibration Gain" designator="p.q.gain.b"/>
+	<register address="4AH" name="PhiB" type="R/W" description="Phase B Calibration Phase Angle" designator="ph.i.b"/>
+	<register address="4BH" name="PQGainC" type="R/W" description="Phase C Calibration Gain" designator="p.q.gain.c"/>
+	<register address="4CH" name="PhiC" type="R/W" description="Phase C Calibration Phase Angle" designator="ph.i.c"/>
+	<register address="51H" name="PoffsetAF" type="R/W" description="Phase A Fundamental Active Power offset" designator="p.offset.a.f"/>
+	<register address="52H" name="PoffsetBF" type="R/W" description="Phase B Fundamental Active Power offset" designator="p.offset.b.f"/>
+	<register address="53H" name="PoffsetCF" type="R/W" description="Phase C Fundamental Active Power offset" designator="p.offset.c.f"/>
+	<register address="54H" name="PGainAF" type="R/W" description="Phase A Fundamental Calibration Gain" designator="p.gain.a.f"/>
+	<register address="55H" name="PGainBF" type="R/W" description="Phase B Fundamental Calibration Gain" designator="p.gain.b.f"/>
+	<register address="56H" name="PGainCF" type="R/W" description="Phase C Fundamental Calibration Gain" designator="p.gain.c.f"/>
+	<register address="61H" name="UgainA" type="R/W" description="Phase A Voltage RMS Gain" designator="u.gain.a"/>
+	<register address="62H" name="IgainA" type="R/W" description="Phase A Current RMS Gain" designator="i.gain.a"/>
+	<register address="63H" name="UoffsetA" type="R/W" description="Phase A Voltage RMS offset" designator="u.offset.a"/>
+	<register address="64H" name="IoffsetA" type="R/W" description="Phase A Current RMS offset" designator="i.offset.a"/>
+	<register address="65H" name="UgainB" type="R/W" description="Phase B Voltage RMS Gain" designator="u.gain.b"/>
+	<register address="66H" name="IgainB" type="R/W" description="Phase B Current RMS Gain" designator="i.gain.b"/>
+	<register address="67H" name="UoffsetB" type="R/W" description="Phase B Voltage RMS offset" designator="u.offset.b"/>
+	<register address="68H" name="IoffsetB" type="R/W" description="Phase B Current RMS offset" designator="i.offset.b"/>
+	<register address="69H" name="UgainC" type="R/W" description="Phase C Voltage RMS Gain" designator="u.gain.c"/>
+	<register address="6AH" name="IgainC" type="R/W" description="Phase C Current RMS Gain" designator="i.gain.c"/>
+	<register address="6BH" name="UoffsetC" type="R/W" description="Phase C Voltage RMS offset" designator="u.offset.c"/>
+	<register address="6CH" name="IoffsetC" type="R/W" description="Phase C Current RMS offset" designator="i.offset.c"/>
+	<register address="70H" name="SoftReset" type="R/W" description="Software Reset" designator="soft.reset"/>
+	<register address="71H" name="EMMState0" type="R" description="EMM State 0" designator="emm.state0"/>
+	<register address="72H" name="EMMState1" type="R" description="EMM State 1" designator="emm.state1"/>
+	<register address="73H" name="EMMIntState0" type="R/W1C" description="EMM Interrupt Status 0" designator="emm.int.state0"/>
+	<register address="74H" name="EMMIntState1" type="R/W1C" description="EMM Interrupt Status 1" designator="emm.int.state1"/>
+	<register address="75H" name="EMMIntEn0" type="R/W" description="EMM Interrupt Enable 0" designator="emm.int.en0"/>
+	<register address="76H" name="EMMIntEn1" type="R/W" description="EMM Interrupt Enable 1" designator="emm.int.en1"/>
+	<register address="78H" name="LastSPIData" type="R" description="Last Read/Write SPI Value" designator="last.spi.data"/>
+	<register address="79H" name="CRCErrStatus" type="R" description="CRC Error Status" designator="crc.err.status"/>
+	<register address="7AH" name="CRCDigest" type="R/W" description="CRC Digest" designator="crc.digest"/>
+	<register address="7FH" name="CfgRegAccEn" type="R/W" description="Configure Register Access Enable" designator="cfg.reg.acc.en"/>
+	<register address="80H" name="APenergyT" type="R/C" description="Total Forward Active Energy" designator="a.p.energy.t"/>
+	<register address="81H" name="APenergyA" type="R/C" description="Phase A Forward Active Energy" designator="a.p.energy.a"/>
+	<register address="82H" name="APenergyB" type="R/C" description="Phase B Forward Active Energy" designator="a.p.energy.b"/>
+	<register address="83H" name="APenergyC" type="R/C" description="Phase C Forward Active Energy" designator="a.p.energy.c"/>
+	<register address="84H" name="ANenergyT" type="R/C" description="Total Reverse Active Energy" designator="a.n.energy.t"/>
+	<register address="85H" name="ANenergyA" type="R/C" description="Phase A Reverse Active Energy" designator="a.n.energy.a"/>
+	<register address="86H" name="ANenergyB" type="R/C" description="Phase B Reverse Active Energy" designator="a.n.energy.b"/>
+	<register address="87H" name="ANenergyC" type="R/C" description="Phase C Reverse Active Energy" designator="a.n.energy.c"/>
+	<register address="88H" name="RPenergyT" type="R/C" description="Total Forward Reactive Energy" designator="r.p.energy.t"/>
+	<register address="89H" name="RPenergyA" type="R/C" description="Phase A Forward Reactive Energy" designator="r.p.energy.a"/>
+	<register address="8AH" name="RPenergyB" type="R/C" description="Phase B Forward Reactive Energy" designator="r.p.energy.b"/>
+	<register address="8BH" name="RPenergyC" type="R/C" description="Phase C Forward Reactive Energy" designator="r.p.energy.c"/>
+	<register address="8CH" name="RNenergyT" type="R/C" description="Total Reverse Reactive Energy" designator="r.n.energy.t"/>
+	<register address="8DH" name="RNenergyA" type="R/C" description="Phase A Reverse Reactive Energy" designator="r.n.energy.a"/>
+	<register address="8EH" name="RNenergyB" type="R/C" description="Phase B Reverse Reactive Energy" designator="r.n.energy.b"/>
+	<register address="8FH" name="RNenergyC" type="R/C" description="Phase C Reverse Reactive Energy" designator="r.n.energy.c"/>
+	<register address="90H" name="SAenergyT" type="R/C" description="Total (Arithmetic Sum) Apparent Energy" designator="s.a.energy.t"/>
+	<register address="91H" name="SenergyA" type="R/C" description="Phase A Apparent Energy" designator="s.energy.a"/>
+	<register address="92H" name="SenergyB" type="R/C" description="Phase B Apparent Energy" designator="s.energy.b"/>
+	<register address="93H" name="SenergyC" type="R/C" description="Phase C Apparent Energy" designator="s.energy.c"/>
+	<register address="A0H" name="APenergyTF" type="R/C" description="Total Forward Active Fundamental Energy" designator="a.p.energy.t.f"/>
+	<register address="A1H" name="APenergyAF" type="R/C" description="Phase A Forward Active Fundamental Energy" designator="a.p.energy.a.f"/>
+	<register address="A2H" name="APenergyBF" type="R/C" description="Phase B Forward Active Fundamental Energy" designator="a.p.energy.b.f"/>
+	<register address="A3H" name="APenergyCF" type="R/C" description="Phase C Forward Active Fundamental Energy" designator="a.p.energy.c.f"/>
+	<register address="A4H" name="ANenergyTF" type="R/C" description="Total Reverse Active Fundamental Energy" designator="a.n.energy.t.f"/>
+	<register address="A5H" name="ANenergyAF" type="R/C" description="Phase A Reverse Active Fundamental Energy" designator="a.n.energy.a.f"/>
+	<register address="A6H" name="ANenergyBF" type="R/C" description="Phase B Reverse Active Fundamental Energy" designator="a.n.energy.b.f"/>
+	<register address="A7H" name="ANenergyCF" type="R/C" description="Phase C Reverse Active Fundamental Energy" designator="a.n.energy.c.f"/>
+	<register address="A8H" name="APenergyTH" type="R/C" description="Total Forward Active Harmonic Energy" designator="a.p.energy.t.h"/>
+	<register address="A9H" name="APenergyAH" type="R/C" description="Phase A Forward Active Harmonic Energy" designator="a.p.energy.a.h"/>
+	<register address="AAH" name="APenergyBH" type="R/C" description="Phase B Forward Active Harmonic Energy" designator="a.p.energy.b.h"/>
+	<register address="ABH" name="APenergyCH" type="R/C" description="Phase C Forward Active Harmonic Energy" designator="a.p.energy.c.h"/>
+	<register address="ACH" name="ANenergyTH" type="R/C" description="Total Reverse Active Harmonic Energy" designator="a.n.energy.t.h"/>
+	<register address="ADH" name="ANenergyAH" type="R/C" description="Phase A Reverse Active Harmonic Energy" designator="a.n.energy.a.h"/>
+	<register address="AEH" name="ANenergyBH" type="R/C" description="Phase B Reverse Active Harmonic Energy" designator="a.n.energy.b.h"/>
+	<register address="AFH" name="ANenergyCH" type="R/C" description="Phase C Reverse Active Harmonic Energy" designator="a.n.energy.c.h"/>
+	<register address="B0H" name="PmeanT" type="R" description="Total (all-phase-sum) Active Power" designator="p.mean.t"/>
+	<register address="B1H" name="PmeanA" type="R" description="Phase A Active Power" designator="p.mean.a"/>
+	<register address="B2H" name="PmeanB" type="R" description="Phase B Active Power" designator="p.mean.b"/>
+	<register address="B3H" name="PmeanC" type="R" description="Phase C Active Power" designator="p.mean.c"/>
+	<register address="B4H" name="QmeanT" type="R" description="Total (all-phase-sum) Reactive Power" designator="q.mean.t"/>
+	<register address="B5H" name="QmeanA" type="R" description="Phase A Reactive Power" designator="q.mean.a"/>
+	<register address="B6H" name="QmeanB" type="R" description="Phase B Reactive Power" designator="q.mean.b"/>
+	<register address="B7H" name="QmeanC" type="R" description="Phase C Reactive Power" designator="q.mean.c"/>
+	<register address="B8H" name="SmeanT" type="R" description="Total (Arithmetic Sum) Apparent Power" designator="s.mean.t"/>
+	<register address="B9H" name="SmeanA" type="R" description="Phase A Apparent Power" designator="s.mean.a"/>
+	<register address="BAH" name="SmeanB" type="R" description="Phase B Apparent Power" designator="s.mean.b"/>
+	<register address="BBH" name="SmeanC" type="R" description="Phase C Apparent Power" designator="s.mean.c"/>
+	<register address="BCH" name="PFmeanT" type="R" description="Total Power Factor" designator="p.f.mean.t"/>
+	<register address="BDH" name="PFmeanA" type="R" description="Phase A Power Factor" designator="p.f.mean.a"/>
+	<register address="BEH" name="PFmeanB" type="R" description="Phase B Power Factor" designator="p.f.mean.b"/>
+	<register address="BFH" name="PFmeanC" type="R" description="Phase C Power Factor" designator="p.f.mean.c"/>
+	<register address="C0H" name="PmeanTLSB" type="R" description="Lower Word of Total (all-phase-sum) ActivePower" designator="p.mean.t.l.s.b"/>
+	<register address="C1H" name="PmeanALSB" type="R" description="Lower Word of Phase A Active Power" designator="p.mean.a.l.s.b"/>
+	<register address="C2H" name="PmeanBLSB" type="R" description="Lower Word of Phase B Active Power" designator="p.mean.b.l.s.b"/>
+	<register address="C3H" name="PmeanCLSB" type="R" description="Lower Word of Phase C Active Power" designator="p.mean.c.l.s.b"/>
+	<register address="C4H" name="QmeanTLSB" type="R" description="Lower Word of Total (all-phase-sum) ReactivePower" designator="q.mean.t.l.s.b"/>
+	<register address="C5H" name="QmeanALSB" type="R" description="Lower Word of Phase A Reactive Power" designator="q.mean.a.l.s.b"/>
+	<register address="C6H" name="QmeanBLSB" type="R" description="Lower Word of Phase B Reactive Power" designator="q.mean.b.l.s.b"/>
+	<register address="C7H" name="QmeanCLSB" type="R" description="Lower Word of Phase C Reactive Power" designator="q.mean.c.l.s.b"/>
+	<register address="C8H" name="SAmeanTLSB" type="R" description="Lower Word of Total (Arithmetic Sum) Apparent Power" designator="s.a.mean.t.l.s.b"/>
+	<register address="C9H" name="SmeanALSB" type="R" description="Lower Word of Phase A Apparent Power" designator="s.mean.a.l.s.b"/>
+	<register address="CAH" name="SmeanBLSB" type="R" description="Lower Word of Phase B Apparent Power" designator="s.mean.b.l.s.b"/>
+	<register address="CBH" name="SmeanCLSB" type="R" description="Lower Word of Phase C Apparent Power" designator="s.mean.c.l.s.b"/>
+	<register address="D0H" name="PmeanTF" type="R" description="Total Active Fundamental Power" designator="p.mean.t.f"/>
+	<register address="D1H" name="PmeanAF" type="R" description="Phase A Active Fundamental Power" designator="p.mean.a.f"/>
+	<register address="D2H" name="PmeanBF" type="R" description="Phase B Active Fundamental Power" designator="p.mean.b.f"/>
+	<register address="D3H" name="PmeanCF" type="R" description="Phase C Active Fundamental Power" designator="p.mean.c.f"/>
+	<register address="D4H" name="PmeanTH" type="R" description="Total Active Harmonic Power" designator="p.mean.t.h"/>
+	<register address="D5H" name="PmeanAH" type="R" description="Phase A Active Harmonic Power" designator="p.mean.a.h"/>
+	<register address="D6H" name="PmeanBH" type="R" description="Phase B Active Harmonic Power" designator="p.mean.b.h"/>
+	<register address="D7H" name="PmeanCH" type="R" description="Phase C Active Harmonic Power" designator="p.mean.c.h"/>
+	<register address="D9H" name="UrmsA" type="R" description="Phase A Voltage RMS" designator="u.rms.a"/>
+	<register address="DAH" name="UrmsB" type="R" description="Phase B Voltage RMS" designator="u.rms.b"/>
+	<register address="DBH" name="UrmsC" type="R" description="Phase C Voltage RMS" designator="u.rms.c"/>
+	<register address="DCH" name="IrmsN" type="R" description="N Line Calculated Current RMS" designator="i.rms.n"/>
+	<register address="DDH" name="IrmsA" type="R" description="Phase A Current RMS" designator="i.rms.a"/>
+	<register address="DEH" name="IrmsB" type="R" description="Phase B Current RMS" designator="i.rms.b"/>
+	<register address="DFH" name="IrmsC" type="R" description="Phase C Current RMS" designator="i.rms.c"/>
+	<register address="E0H" name="PmeanTFLSB" type="R" description="Lower Word of Total Active Fundamental Power" designator="p.mean.t.f.l.s.b"/>
+	<register address="E1H" name="PmeanAFLSB" type="R" description="Lower Word of Phase A Active Fundamental Power" designator="p.mean.a.f.l.s.b"/>
+	<register address="E2H" name="PmeanBFLSB" type="R" description="Lower Word of Phase B Active Fundamental Power" designator="p.mean.b.f.l.s.b"/>
+	<register address="E3H" name="PmeanCFLSB" type="R" description="Lower Word of Phase C Active Fundamental Power" designator="p.mean.c.f.l.s.b"/>
+	<register address="E4H" name="PmeanTHLSB" type="R" description="Lower Word of Total Active Harmonic Power" designator="p.mean.t.h.l.s.b"/>
+	<register address="E5H" name="PmeanAHLSB" type="R" description="Lower Word of Phase A Active Harmonic Power" designator="p.mean.a.h.l.s.b"/>
+	<register address="E6H" name="PmeanBHLSB" type="R" description="Lower Word of Phase B Active Harmonic Power" designator="p.mean.b.h.l.s.b"/>
+	<register address="E7H" name="PmeanCHLSB" type="R" description="Lower Word of Phase C Active Harmonic Power" designator="p.mean.c.h.l.s.b"/>
+	<register address="E9H" name="UrmsALSB" type="R" description="Lower Word of Phase A Voltage RMS" designator="u.rms.a.l.s.b"/>
+	<register address="EAH" name="UrmsBLSB" type="R" description="Lower Word of Phase B Voltage RMS" designator="u.rms.b.l.s.b"/>
+	<register address="EBH" name="UrmsCLSB" type="R" description="Lower Word of Phase C Voltage RMS" designator="u.rms.c.l.s.b"/>
+	<register address="EDH" name="IrmsALSB" type="R" description="Lower Word of Phase A Current RMS" designator="i.rms.a.l.s.b"/>
+	<register address="EEH" name="IrmsBLSB" type="R" description="Lower Word of Phase B Current RMS" designator="i.rms.b.l.s.b"/>
+	<register address="EFH" name="IrmsCLSB" type="R" description="Lower Word of Phase C Current RMS" designator="i.rms.c.l.s.b"/>
+	<register address="F1H" name="UPeakA" type="R" description="Channel A Voltage Peak" designator="u.peak.a"/>
+	<register address="F2H" name="UPeakB" type="R" description="Channel B Voltage Peak" designator="u.peak.b"/>
+	<register address="F3H" name="UPeakC" type="R" description="Channel C Voltage Peak" designator="u.peak.c"/>
+	<register address="F5H" name="IPeakA" type="R" description="Channel A Current Peak" designator="i.peak.a"/>
+	<register address="F6H" name="IPeakB" type="R" description="Channel B Current Peak" designator="i.peak.b"/>
+	<register address="F7H" name="IPeakC" type="R" description="Channel C Current Peak" designator="i.peak.c"/>
+	<register address="F8H" name="Freq" type="R" description="Frequency" designator="freq"/>
+	<register address="F9H" name="PAngleA" type="R" description="Phase A Mean Phase Angle" designator="p.angle.a"/>
+	<register address="FAH" name="PAngleB" type="R" description="Phase B Mean Phase Angle" designator="p.angle.b"/>
+	<register address="FBH" name="PAngleC" type="R" description="Phase C Mean Phase Angle" designator="p.angle.c"/>
+	<register address="FCH" name="Temp" type="R" description="Measured Temperature" designator="temp"/>
+	<register address="FDH" name="UangleA" type="R" description="Phase A Voltage Phase Angle" designator="u.angle.a"/>
+	<register address="FEH" name="UangleB" type="R" description="Phase B Voltage Phase Angle" designator="u.angle.b"/>
+	<register address="FFH" name="UangleC" type="R" description="Phase C Voltage Phase Angle" designator="u.angle.c"/>
+</root>

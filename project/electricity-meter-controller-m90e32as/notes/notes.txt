@@ -1,0 +1,13 @@
+IMPORTANT
+Output pins PM1 - Power mode
+			PM9 - Configuration mode
+
+
+PROGRAMMER INFORMATON
+- no calibration needed for reactive/ apparent energy.
+
+
+
+GENERAL INFORMATON
+
+ - less than ±0.5% fiducial error for Vrms, Irms, mean active/ reactive/ apparent power, frequency, power factor and phase angle

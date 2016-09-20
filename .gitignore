@@ -1,0 +1,11 @@
+# Ignore everything recursively
+*
+
+# Do not ignore folders recursively
+!*/
+
+# Do not ignore the following files recursively
+!.gitignore
+!.gitattributes
+!.gitmodules
+!.gitkeep
